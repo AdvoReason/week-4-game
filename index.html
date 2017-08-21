@@ -1,61 +1,79 @@
 <!doctype html>
 <html class="no-js" lang="">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>Play to Win Nothing!</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="apple-touch-icon" href="apple-touch-icon.png">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.min.css">
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
-        <link href="https://fonts.googleapis.com/css?family=Indie+Flower|Josefin+Sans" rel="stylesheet">
-        <link rel="stylesheet" href="assets/css/style.css"> 
-    </head>
-    <body>
-    <div class="container" id="header">
-		<div><h1>Crystal Game!</h1></div>
-	</div>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Play to Win Nothing!</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower|Josefin+Sans" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <div class="container" id="header" style="text-align: center">
+        <div class="jumbotron">
+            <div class="title">
+                <h1>Welcome to the Crystal Game!</h1>
+            </div>
+        </div>
+    </div>
     <div class="container" id="instructions">
-		<div><h3>You will be given a random number at the start of the game.</h3></div>
-		<div><h3>There are four crystals below.  By clicking on a crystal you will add a specific amount of points to your total score.</h3></div>
-		<div><h3>You win the game by matching your total score to random number, you lose the game if your total score goes above the random number.</h3></div>
-		<div><h3>The value of each crystal is hidden from you until you click on it.</h3></div>
-		<div><h3>Each time when the game starts, the game will change the value of each crystal.</h3></div>
-	</div>
-	<div class="container" id="userEntry">
-		<div class="row">
-			<div class="text-center">
-				<div id="random"><span id="randomNum">0</span></div>
-				<div id="record">
-					<p>Wins: <span id="wins">0</span></p>
-					<p>Losses: <span id="wins">0</span></p>
-				</div>
-			</div>
-		</div>
-	</div>
-    <div class="container">
-		<div class="row">
-			<button id="button-1"><img src="http://icons.iconarchive.com/icons/aha-soft/jewelry/128/Garnet-icon.png" alt="">0</button>
-			<button id="button-2"><img src="http://icons.iconarchive.com/icons/aha-soft/jewelry/128/Sapphire-icon.png" alt=""></button>
-			<button id="button-3"><img src="http://icons.iconarchive.com/icons/aha-soft/jewelry/128/Gem-icon.png" alt=""></button>
-			<button id="button-4"><img src="http://icons.iconarchive.com/icons/aha-soft/jewelry/128/Swarovski-crystal-icon.png" alt=""></button>
-		</div>
-	</div>
+        <h3>Instructions: </h3>
+        <ul>
+            <li>You will be given a random number at the start of the game.</li>
+            <li>There are four crystals below. By clicking on a crystal you will add a specific amount of points to your total score.</li>
+            <li>You win the game by matching your total score to random number, you lose the game if your total score goes above the random number.</li>
+            <li>The value of each crystal is hidden from you until you click on it.</li>
+            <li>Each time when the game starts, the game will change the value of each crystal.</li>
+        </ul>
+    </div>
+    <div class="container" id="aboveBtn" style="text-align: center">
+        <div class="container panel">
+            <div class="row">
+                <div id="random">
+                	<h3>Match this number to win! </h3>
+					<p><span id="randomNum">0</span></p>
+                </div>
+            </div>
+        </div>
+        <div class="container panel" id="record">
+            <div class="row" id="record">
+                <h3>Wins: <span id="wins">0</span></h3>
+                <h3>Losses: <span id="wins">0</span></h3>
+            </div>
+        </div>
+    </div>
+    <div class="container" id="gems" style="text-align: center">
+        <button id="ruby" class="click-hide"><img src="assets/images/Garnet-icon.png" alt="Garnet-icon"></button>
+        <p id="btn-1" class="click-show"><span id="gemNum1">#</span></p>
+        <button id="sapphire" class="click-hide"><img src="assets/images/Sapphire-icon.png" alt="Sapphire-icon"></button>
+        <p id="btn-2" class="click-show"><span id="genNum2">0</span></p>
+        <button id="diamond" class="click-hide"><img src="assets/images/Diamond-icon.png" alt="Diamond-icon"></button>
+        <p id="btn-3" class="click-show"><span id="genNum3">0</span></p>
+        <button id="crystal" class="click-hide"><img src="assets/images/Swarovski-crystal-icon.png" alt="Swarvoski-crystal-icon"></button>
+        <p id="btn-4" class="click-show"><span id="genNum4">0</span></p>
+    </div>
     <div class="container" id="userScore">
-		<div>Your Total Score is: </div>
-	</div>
-		<div><span id="userScore">0</span></div>
+    	<div class="container panel">
+	        <div><p>Your Total Score is: </p></div>
+	        <div><p><span id="totalScore">0</span></p></div>
+        </div>
+    	<div class="container panel">
+	        <div><p><span id="feedback">Hello</span></p></div>
+        </div>
+    </div>
 
+    <script src="http://code.jquery.com/jquery-1.12.4.min.js"></script>
 
-        <script src="http://code.jquery.com/jquery-1.12.4.min.js"></script>
-        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.12.4.min.js"><\/script>')</script>
-        <script>
-            window.ga=function(){ga.q.push(arguments)};ga.q=[];ga.l=+new Date;
-            ga('create','UA-XXXXX-Y','auto');ga('send','pageview')
-        </script>
-        <script src="https://www.google-analytics.com/analytics.js" async defer></script>
-        <script type="text/javascript" src="assets/javascript/game.js"></script>
+    <script src="https://www.google-analytics.com/analytics.js" async defer></script>
+    <script type="text/javascript" src="assets/javascript/game.js"></script>
+</body>
 
-    </body>
 </html>

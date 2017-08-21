@@ -1,34 +1,55 @@
+
 body {
 	background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSellCQ7c_2UoLjglFzjdwvsAkFNZ5Va4pT2yx3tDSMf1_4_uyh");
 	padding: 10px;
+	margin: 10px;
 	color: #ccc;
-	font-family: "Indie Flower", "JoseFin Sans", sans-serif;
+	font-family: "JoseFin Sans", "Indie Flower", sans-serif;
 
 }
 
-
-#instructions {
-	background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRIrscIq2_jc4PmVtlutbtogxXt7TM7DHl3VrCJIaSnDZvUP6IJ");
-	padding: 25px;
-
-}
-
-#header, #random, #record, #userScore { 
-	background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ2Gcz_Fis5_RoQ9gYFoGlo4SmcH-tQJpEX1k3N9kTd1KL1N1Jn3g");
-	width: 100%;
-	height: 100%;
-	max-width: 45%;
-	margin: 20px 1px 20px 1px;
-	padding: 10px;
-	font-size: 24px;
-	display: inline-block;
-	
-}
-
-#random {
-	padding-top: 35px;
-	padding-bottom: 35px;
-	font-size: 50px;
+p {
+	font-size: 30px;
 	text-align: center;
 
+}
+
+.container {
+	background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSellCQ7c_2UoLjglFzjdwvsAkFNZ5Va4pT2yx3tDSMf1_4_uyh");
+	color: #ccc;
+	border: 5px outset gray;
+	border-radius: 10px;
+	margin: 10px;
+}
+
+#instructions {
+	padding: 25px;
+}
+
+.panel {
+	width: 100%;
+	max-width: 45%;
+	height: 100%;
+	display: inline-block;
+	border: none;
+	background-image:none;
+}
+
+.click-hide, .click-show {
+	border: 5px outset #ccc;
+	border-radius: 10px;
+	margin: 0px 3px 0px 3px;
+	display: inline-block;
+
+}
+
+.click-show {
+	padding: 50px;
+	background-color:#1356a7;
+	border-color: #135671;
+	color: #ccc;
+}
+
+#gems{
+	border: none;
 }
