@@ -48,8 +48,16 @@ p {
 	background-color:#1356a7;
 	border-color: #135671;
 	color: #ccc;
+	font-size: 30px
 }
 
 #gems{
 	border: none;
+}
+ 
+#playAgain {
+	padding: 20px;
+	border: 5px outset gray;
+	border-radius: 10px;
+
 }
